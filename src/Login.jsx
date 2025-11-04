@@ -3,14 +3,14 @@ import { useNavigate } from "react-router-dom";
 import { usercontext } from "./App";
 
 function Login() {
-  const [name, setName] = useState(""); // input box value
+  const [name, setName] = useState(""); 
   const { dispatch } = useContext(usercontext);
   const navigate = useNavigate();
 
   function handleLogin(e) {
-    e.preventDefault(); // stop page refresh
-    dispatch({ type: "LOGIN", payload: name }); // send name to context
-    navigate("/home"); // go to home page
+    e.preventDefault(); 
+    dispatch({ type: "LOGIN", payload: name }); 
+    navigate("/home"); 
   }
 
   return (
